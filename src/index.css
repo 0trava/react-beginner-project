@@ -1,7 +1,5 @@
 * {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
@@ -31,16 +29,14 @@ body {
   line-height: 23px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.1s ease-in-out;
-
-  &:hover {
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    transform: translateY(0);
-  }
+}
+.open-modal-btn:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+.open-modal-btn:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
 }
 
 .overlay {
@@ -66,46 +62,40 @@ body {
   transform: translate(-50%, -50%);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease-in-out;
-
-  img {
-    border-radius: 5px;
-    width: 80%;
-  }
-
-  svg {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    height: 24px;
-    width: 24px;
-    opacity: 0.3;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
+}
+.modal img {
+  border-radius: 5px;
+  width: 80%;
+}
+.modal svg {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 24px;
+  width: 24px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.modal svg:hover {
+  opacity: 1;
 }
 
 .overlay.animated {
   opacity: 0;
   visibility: hidden;
-
-  .modal {
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(-50%, -30%);
-    transition-delay: 0.2s;
-  }
-
-  &.show {
-    opacity: 1;
-    visibility: visible;
-
-    .modal {
-      opacity: 1;
-      visibility: visible;
-      transform: translate(-50%, -50%);
-    }
-  }
 }
+.overlay.animated .modal {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -30%);
+  transition-delay: 0.2s;
+}
+.overlay.animated.show {
+  opacity: 1;
+  visibility: visible;
+}
+.overlay.animated.show .modal {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}/*# sourceMappingURL=index.css.map */
